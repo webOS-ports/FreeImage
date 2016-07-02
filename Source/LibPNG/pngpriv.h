@@ -107,6 +107,7 @@
  * this in $(CC), e.g. "CC=gcc -mfpu=neon", but people who build libpng rarely
  * do this.
  */
+#if 0
 #ifndef PNG_ARM_NEON_OPT
    /* ARM NEON optimizations are being controlled by the compiler settings,
     * typically the target FPU.  If the FPU has been set to NEON (-mfpu=neon
@@ -179,7 +180,7 @@
 #     define PNG_ARM_NEON_IMPLEMENTATION 1
 #  endif
 #endif /* PNG_ARM_NEON_OPT > 0 */
-
+#endif
 /* Is this a build of a DLL where compilation of the object modules requires
  * different preprocessor settings to those required for a simple library?  If
  * so PNG_BUILD_DLL must be set.
